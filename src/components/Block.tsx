@@ -67,7 +67,7 @@ export const Block: React.FC<React.PropsWithChildren<BlockProps>> = ({
   const shouldUseChildren = !hasDivider;
   const validChildren = getValidChildren(children);
 
-  const clones = shouldUseChildren //po co te klony?
+  const clones = shouldUseChildren
     ? validChildren
     : validChildren.map((child, idx) => {
         if (!hasDivider) {

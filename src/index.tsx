@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { LoginTabs } from "./components/LoginTabs";
 import { LoginDialog } from "./components/LoginDialog";
 import { UserProfile } from "./components/UserProfile";
 const root = ReactDOM.createRoot(
@@ -17,7 +16,7 @@ root.render(
         <Route path="profile" element={<UserProfile />} />
       </Route>
       <Route
-        path="*" //gwiazdka oznacza, że ta droga będzie wyskakiwała wtedy, kiedy żadna inna droga nie będzie pasowała
+        path="*"
         element={
           <main style={{ padding: "1rem" }}>
             <p>404 not found</p>
@@ -29,4 +28,3 @@ root.render(
 );
 
 reportWebVitals();
-//po dodaniu * register pojawia się na stronie od razu

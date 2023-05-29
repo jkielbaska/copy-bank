@@ -13,7 +13,6 @@ import { ResultHandler } from "../types/ResultHandler";
 const LoginSchema = z.object({
   email: z.string().min(1, { message: "required" }).max(20),
   password: z.string().min(1, { message: "required" }).max(50),
-  // .regex("")
 });
 
 type LoginSchemaType = z.infer<typeof LoginSchema>;
@@ -28,7 +27,7 @@ export const useLoginUser = ({ onError, onSuccess }: UseLoginUserProps) => {
   const handleLogin = async ({ password, email }: LoginSchemaType) => {
     setIsLoading(true);
     try {
-      await setPersistence(auth, browserSessionPersistence); //state persistence firebase -- nie działa, dlatego jest undefined w avatarze
+      await setPersistence(auth, browserSessionPersistence);
       const {
         user: { uid },
       } = await signInWithEmailAndPassword(auth, email, password);

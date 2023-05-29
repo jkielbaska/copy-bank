@@ -6,7 +6,6 @@ import { Block } from "./Block";
 import { Button } from "./Button";
 import { useRegisterUser } from "../hooks/useRegisterUser";
 import { toast } from "react-toastify";
-// import { useNavigate } from "react-router-dom";
 
 const StyledInput = styled.input({
   width: "70%",
@@ -53,9 +52,6 @@ export const RegisterPanel = () => {
   });
   const watchAvatar = watch("avatar");
   console.log(watchAvatar);
-  // useEffect(() => {
-  //   const watchAvatar = watch((value) => console.log(value));
-  // }, [watch]);
 
   return (
     <StyledForm onSubmit={handleRegister}>

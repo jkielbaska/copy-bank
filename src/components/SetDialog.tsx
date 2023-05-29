@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "@emotion/styled";
 import * as Dialog from "@radix-ui/react-dialog";
 import { ColorStripe } from "./ColorStripe";
@@ -30,7 +30,6 @@ const StyledContent = styled(Dialog.Content)({
 });
 
 const LoginFrame = styled.div({
-  // zIndex: 100,
   marginTop: "65px",
   width: "auto",
   height: "auto",
@@ -54,13 +53,7 @@ export const SetDialog = ({ variant }: SetDialogProps) => {
       <Dialog.Trigger asChild>
         <StyledLogin>
           <ColorStripe background={variant}></ColorStripe>
-          <Block
-            width="full"
-            height="title"
-            direction="column"
-            // justify="space-around"
-            // css={css``}
-          >
+          <Block width="full" height="title" direction="column">
             <Text size="big">
               {variant === "KI"
                 ? "Klienci indywidualni"

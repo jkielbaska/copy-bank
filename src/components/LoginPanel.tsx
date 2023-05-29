@@ -2,7 +2,6 @@ import React from "react";
 import styled from "@emotion/styled";
 import avatarRetail from "../assets/avatarRetail.png";
 import avatar_pb from "../assets/avatar_pb.png";
-import { css } from "@emotion/react";
 import { Text } from "./Text";
 import { Block } from "./Block";
 import { Button } from "./Button";
@@ -52,10 +51,7 @@ export const LoginPanel = ({ variant }: LoginPanelProps) => {
 
   return (
     <div>
-      <Block
-      // css={css`
-      // `}  czemu tu wyskakuje błąd? TS2322: Type 'SerializedStyles' is not assignable to type 'string'.
-      >
+      <Block>
         <Text size="big">
           {variant === "KI"
             ? "Klienci indywidualni"

@@ -9,7 +9,6 @@ import { RegisterPanel } from "./RegisterPanel";
 import { LoginPanel } from "./LoginPanel";
 
 const LoginFrame = styled.div({
-  // zIndex: 100,
   marginTop: "80px",
   width: "auto",
   height: "auto",
@@ -23,17 +22,9 @@ const LoginFrame = styled.div({
   borderRadius: "0px 0px 10px 10px",
 });
 
-// interface LoginTabsProps {
-//   title: string;
-//   variant: "KI" | "PB" | "CN";
-// }
-
 const TabsTriggedStyled = styled(Tabs.Trigger)({
   border: "none",
   paddingRight: "10px",
-  // display: "flex"//po dodaniu flexa znika colorstripe
-  // position: "absolute",
-  // left: 0,
 });
 
 export const LoginTabs = () => {
@@ -119,71 +110,3 @@ export const LoginTabs = () => {
     </Block>
   );
 };
-
-/* <LoginFrame>
-<Tabs.Root>
-  <Tabs.List>
-    <Tabs.Trigger value={title}>
-      <ColorStripe background={variant}></ColorStripe>
-      <Block
-        width="full"
-        height="title"
-        direction="column"
-        justify="space-around"
-      >
-        <Text size="big">{title}</Text>
-      </Block>
-    </Tabs.Trigger>
-    <Tabs.Trigger value="tab">
-      <ColorStripe background={variant}></ColorStripe>
-      <Block
-        width="full"
-        height="title"
-        direction="column"
-        justify="space-around"
-      >
-        <Text size="big">Rejestracja</Text>
-      </Block>
-    </Tabs.Trigger>
-  </Tabs.List>
-
-  {/* <LoginFrame> */
-
-//   <Tabs.Content value={title}>
-//     <Block>
-//       <img src={avatarRetail} alt={variant + "avatarLogo"}></img>
-//     </Block>
-//     <Block>
-//       <form onSubmit={handleSubmit(onSubmit)}>
-//         <StyledInput
-//           placeholder="Identyfikator"
-//           {...register("Identyfikator", {
-//             required: true,
-//             maxLength: 20,
-//           })}
-//         />
-//         <div>
-//           {formState?.errors?.login && (
-//             <span>This field is required, max length 20</span>
-//           )}
-//         </div>
-
-//         <StyledInput
-//           type="password"
-//           placeholder="Hasło"
-//           {...register("Hasło", { required: true, maxLength: 20 })}
-//         />
-
-//         {formState?.errors?.haslo && <span>max length 20</span>}
-//       </form>
-//     </Block>
-
-//     <Button backgroundcolor={variant}>Zaloguj się</Button>
-
-//     <Block justify="end">
-//       <Link to="/register">Nie masz konta? Zarejestruj się.</Link>
-//     </Block>
-//   </Tabs.Content>
-//   {/* </LoginFrame> */}
-// </Tabs.Root>
-// </LoginFrame> */}

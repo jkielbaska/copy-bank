@@ -14,7 +14,6 @@ const RegisterSchema = z.object({
   login: z.string().min(1, { message: "required" }).max(20),
   password: z.string().min(1, { message: "required" }).max(50),
   avatar: z.any(),
-  // .regex("")
 });
 
 type RegisterSchemaType = z.infer<typeof RegisterSchema>;
